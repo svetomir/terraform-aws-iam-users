@@ -3,7 +3,6 @@ variable "users" {
         pgp_key = string
         tags    = map(string)
     }))
-    default     = {}
     description = "Key-value mapping of IAM User(s)"
 }
 
