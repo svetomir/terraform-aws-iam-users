@@ -1,16 +1,11 @@
-output "iam_users" {
-    value       = aws_iam_user.main
-    description = "The map of all aws_iam_user resources"
-}
-
-output "user_arns" {
+output "arns" {
     value = [
         for user in aws_iam_user.main: aws_iam_user.main[user.name].arn
     ]
     description = "The list of all user's ARNs"
 }
 
-output "user_names" {
+output "names" {
     value = [
         for user in aws_iam_user.main: aws_iam_user.main[user.name].name
     ]
@@ -22,11 +17,6 @@ output "unique_ids" {
         for user in aws_iam_user.main: aws_iam_user.main[user.name].unique_id
     ]
     description = "The list of all user's unique_ids"
-}
-
-output "iam_user_login_profiles" {
-    value = aws_iam_user_login_profile.main
-    description = "The map of all iam_user_login_profile resources"
 }
 
 output "encrypted_passwords" {
