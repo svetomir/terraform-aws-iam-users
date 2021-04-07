@@ -7,7 +7,7 @@
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12.20 |
+| terraform | >= 0.13 |
 | aws provider | >= 2.47 |
 
 ## Inputs
